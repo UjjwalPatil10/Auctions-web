@@ -1,0 +1,677 @@
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+  .modal-lg,
+  .modal-xl {
+    --bs-modal-width: 840px;
+
+  }
+.nameInp{
+  width: 236px;
+}
+  .select-inp {
+    width: 236px;
+    height: 36px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .DeadlineInp{
+    width: 220px;
+    height: 36px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .BidInp{
+    width: 220px;
+    height: 36px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .auction-name {
+    width: 200px;
+  }
+
+  .view-dateInp {
+    border: 1px solid #ccc;
+    height: 36px;
+    border-radius: 4px;
+    width: 211px;
+  }
+  .viewTimeInp{
+    border: 1px solid #ccc;
+    height: 35px;
+    border-radius: 4px;
+    width: 211px;
+
+
+  }
+  .startDateInp{
+    border: 1px solid #ccc;
+    height: 35px;
+    border-radius: 4px;
+    width: 211px;
+
+  }
+
+  .startTimeInp{
+    border: 1px solid #ccc;
+    height: 35px;
+    border-radius: 4px;
+    width: 211px;
+
+  }
+
+  /* 3rd row  */
+  .endDateInp{
+    border: 1px solid #ccc;
+    height: 35px;
+    border-radius: 4px;
+    width: 211px;
+  }
+  .endTimeInp{
+    border: 1px solid #ccc;
+    height: 35px;
+    border-radius: 4px;
+    width: 211px;
+  }
+  .defaultIncrementInp{
+    border: 1px solid #ccc;
+    height: 35px;
+    border-radius: 4px;
+    width: 211px;
+  }
+  .add-auction {
+    background-color: #17a2b8 !important;
+
+  }
+  .defaultBid{
+    width: 200px;
+  }
+
+  .auction-mode{
+    width: 88px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  
+  }
+  .auctionResult{
+    border: 1px solid #ccc;
+    width: 211px;
+  }
+  label{
+    width: 205px;
+  }
+
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+
+  .modal-lg,
+  .modal-xl {
+    --bs-modal-width: 970px;
+
+  }
+
+  .select-inp {
+    width: 260px;
+    height: 36px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .DeadlineInp{
+    width: 260px;
+    height: 36px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .BidInp{
+    width: 260px;
+    height: 36px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .auction-name {
+    width: 260px;
+  }
+
+  .view-dateInp {
+    border: 1px solid #ccc;
+    height: 36px;
+    border-radius: 4px;
+    width: 260px;
+  }
+  .viewTimeInp{
+    border: 1px solid #ccc;
+    height: 35px;
+    border-radius: 4px;
+    width: 260px;
+
+
+  }
+  .startDateInp{
+    border: 1px solid #ccc;
+    height: 35px;
+    border-radius: 4px;
+    width: 260px;
+
+  }
+
+  .startTimeInp{
+    border: 1px solid #ccc;
+    height: 35px;
+    border-radius: 4px;
+    width: 260px;
+
+  }
+
+  /* 3rd row  */
+  .endDateInp{
+    border: 1px solid #ccc;
+    height: 35px;
+    border-radius: 4px;
+    width: 211px;
+  }
+  .endTimeInp{
+    border: 1px solid #ccc;
+    height: 35px;
+    border-radius: 4px;
+    width: 260px;
+  }
+  .defaultIncrementInp{
+    border: 1px solid #ccc;
+    height: 35px;
+    border-radius: 4px;
+    width: 260px;
+  }
+  .add-auction {
+    background-color: #17a2b8 !important;
+
+  }
+  .defaultBid{
+    width: 200px;
+  }
+
+  .auction-mode{
+    width: 88px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  
+  }
+  .auctionResult{
+    border: 1px solid #ccc;
+    width: 260px;
+  }
+  label{
+    width: 205px;
+  }
+
+}
+
+@media (min-width: 1400px) and (max-width: 1500px) {
+
+  .modal-lg,
+  .modal-xl {
+    --bs-modal-width: 1110px;
+
+  }
+
+  .select-inp {
+    width: 320px;
+    height: 36px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .DeadlineInp{
+    width: 320px;
+    height: 36px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .BidInp{
+    width: 320px;
+    height: 36px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .auction-name {
+    width: 320px;
+  }
+
+  .view-dateInp {
+    border: 1px solid #ccc;
+    height: 36px;
+    border-radius: 4px;
+    width: 320px;
+  }
+  .viewTimeInp{
+    border: 1px solid #ccc;
+    height: 35px;
+    border-radius: 4px;
+    width: 320px;
+
+
+  }
+  .startDateInp{
+    border: 1px solid #ccc;
+    height: 35px;
+    border-radius: 4px;
+    width: 320px;
+
+  }
+
+  .startTimeInp{
+    border: 1px solid #ccc;
+    height: 35px;
+    border-radius: 4px;
+    width: 320px;
+
+  }
+
+  /* 3rd row  */
+  .endDateInp{
+    border: 1px solid #ccc;
+    height: 35px;
+    border-radius: 4px;
+    width: 320px;
+  }
+  .endTimeInp{
+    border: 1px solid #ccc;
+    height: 35px;
+    border-radius: 4px;
+    width: 320px;
+  }
+  .defaultIncrementInp{
+    border: 1px solid #ccc;
+    height: 35px;
+    border-radius: 4px;
+    width: 320px;
+  }
+  .add-auction {
+    background-color: #17a2b8 !important;
+
+  }
+  .defaultBid{
+    width: 200px;
+  }
+
+  .auction-mode{
+    width: 88px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  
+  }
+  .auctionResult{
+    border: 1px solid #ccc;
+    width: 320px;
+  }
+  label{
+    width: 205px;
+  }
+
+}
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  
+    .modal-sm,
+    .modal-md {
+      --bs-modal-width: 700px;
+  
+      /* width: 750px; */
+    }
+    label{
+      width: 205px;
+    }
+  
+  .modal-content{
+    width: 721px;
+  }
+    .view-dateLab {
+      position: relative;
+      left: 7px;
+    }
+
+    
+  
+    /* style={{ width: "228px", height: "37px", border: "1px solid #ccc", borderRadius: "4px" }} */
+    .auction-name {
+      width: 200px;
+    }
+    /* style={{ border: "1px solid #ccc", height: "35px", borderRadius: "4px" }} */
+   
+    .select-inp {
+      width: 200px;
+      height: 35px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  
+    .view-dateInp {
+      width: 200px;
+
+      border: 1px solid #ccc;
+      height: 36px;
+      border-radius: 4px;
+      position: relative;
+      left: 7px;
+  
+    }
+  
+    .add-auction {
+      background-color: #17a2b8 !important;
+  
+    }
+
+    .view-dateInp {
+      border: 1px solid #ccc;
+      height: 36px;
+      border-radius: 4px;
+      width: 211px;
+    }
+    .viewTimeInp{
+      border: 1px solid #ccc;
+      height: 35px;
+      border-radius: 4px;
+      width: 211px;
+  
+  
+    }
+    .startDateInp{
+      border: 1px solid #ccc;
+      height: 35px;
+      border-radius: 4px;
+      width: 211px;
+
+    }
+
+    .startTimeInp{
+      border: 1px solid #ccc;
+      height: 35px;
+      border-radius: 4px;
+      width: 211px;
+
+    }
+    /* 3rd row  */
+    .endDateInp{
+      border: 1px solid #ccc;
+      height: 35px;
+      border-radius: 4px;
+      width: 211px;
+    }
+    .endTimeInp{
+      border: 1px solid #ccc;
+      height: 35px;
+      border-radius: 4px;
+      width: 211px;
+    }
+    .defaultIncrementInp{
+      border: 1px solid #ccc;
+      height: 35px;
+      border-radius: 4px;
+      width: 211px;
+    }
+
+    /* 5th row  */
+    .DeadlineInp{
+      width: 200px;
+      height: 36px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .BidInp{
+      width: 200px;
+      height: 36px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .modal-dialog{
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .auctionResult{
+      width: 200px;
+    }
+  
+  }
+  
+  
+  @media (min-width: 500PX) and (max-width: 575.98px) {
+    .mobile {
+      height: 50px;
+    }
+  
+    .add-auction {
+      height: 39px;
+      background-color: #17a2b8 !important;
+      border: none !important;
+      position: absolute;
+      bottom: 6px;
+    }
+    .auction-mode{
+  
+      margin-left: 14px;;
+     }
+     .select-inp {
+      width: 376px;
+      height: 35px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  }
+  
+  @media (min-width: 576PX) and (max-width: 767.98px) {
+    .add-auction {
+      background-color: #17a2b8 !important;
+      border: none !important;
+  
+  
+    }
+    .nameInp{
+      width: 200px;
+    }
+    label{
+      width: 140px;
+    }
+    .select-inp {
+      width: 200px;
+      height: 35px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .view-dateInp {
+      border: 1px solid #ccc;
+      height: 36px;
+      border-radius: 4px;
+      width: 211px;
+    }
+    .viewTimeInp{
+      border: 1px solid #ccc;
+      height: 35px;
+      border-radius: 4px;
+      width: 211px;
+  
+  
+    }
+    .startDateInp{
+      border: 1px solid #ccc;
+      height: 35px;
+      border-radius: 4px;
+      width: 211px;
+
+    }
+
+    .startTimeInp{
+      border: 1px solid #ccc;
+      height: 35px;
+      border-radius: 4px;
+      width: 211px;
+
+    }
+    /* 3rd row  */
+    .endDateInp{
+      border: 1px solid #ccc;
+      height: 35px;
+      border-radius: 4px;
+      width: 211px;
+    }
+    .endTimeInp{
+      border: 1px solid #ccc;
+      height: 35px;
+      border-radius: 4px;
+      width: 211px;
+    }
+    .defaultIncrementInp{
+      border: 1px solid #ccc;
+      height: 35px;
+      border-radius: 4px;
+      width: 211px;
+    }
+
+    /* 5th row  */
+    .DeadlineInp{
+      width: 200px;
+      height: 36px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .BidInp{
+      width: 200px;
+      height: 36px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .modal-dialog{
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+  }
+  
+  @media (min-width: 576px)and (max-width: 767.98px) {
+    .modal-sm {
+      --bs-modal-width: 529px;
+    }
+
+
+  }
+  
+  @media (min-width: 576px)and (max-width: 767.98px) {
+    .modal-sm {
+      --bs-modal-width: 529px;
+    }
+    .auction-mode{
+  
+      margin-left: 14px;;
+     }
+  }
+  @media (min-width: 300px) and (max-width:499.98px){
+  .col-sm-3 {
+      flex: 0 0 auto;
+      width: 25%;
+  }
+  .mobile {
+    height: 50px;
+  }
+  .add-auction{
+    position: absolute;
+    /* left: 23px; */
+    right: -35px;
+    bottom: 17px;
+  
+  }
+   .select-inp {
+      width: 200px;
+      height: 35px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+   
+  
+  }
+  
+  @media (min-width: 300px) and (max-width: 499.98px) {
+    .row [class^="col-"] {
+        width: 100% !important;
+        margin-bottom: 10px;
+    }
+  
+    .auction-name {
+        width: 50%;
+    }
+    .auction{
+      width: 50%;
+    }
+    .auction-mode{
+  
+     margin-left: 14px;;
+    }
+  
+    .auction-result{
+      height: 0px;
+    }
+    .nameInp{
+      border: 1px solid #ccc;
+      height: 35px;
+      border-radius: 4px;
+      width: 200px;
+        }
+  }
+
+
+  .auctionResult{
+    border: 1px solid #ccc;
+  }
+  
+  .header-background{
+  background-color: gainsboro;
+  }
+
+  
+  /* style={{ position: "relative", left: "65px" }} */
+  .dashboard{
+  position: relative;
+  left: 65px;
+  }
+  .dash-para{
+  font-size: 23px;
+  }
+  .auction-btn{
+  position: relative;
+  right: 65px;
+  align-items: center;
+  }
+  
+  .nameInp{
+    border: 1px solid #ccc;
+    height: 35px;
+    border-radius: 4px;
+      }
+  
+  
+      .header{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        margin: 5px;
+        height: 45px;
+    }
+    
+    .got {
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hover-effect:hover {
+      transition: color 0.3s ease !important;
+      color: red !important;
+      border-bottom: 3px solid !important;
+      height: 45px !important;
+    }
+
+   
