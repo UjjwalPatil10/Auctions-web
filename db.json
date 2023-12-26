@@ -183,46 +183,6 @@
     {
       "values": {
         "userId": "100",
-        "firstName": "Harshit",
-        "lastName": "Mali",
-        "phoneNumber": "6161644161",
-        "faxNo": "6166456",
-        "companyName": "samyak",
-        "address": "dhule",
-        "city": "ergrg",
-        "zipCode": "5435386",
-        "country": "india",
-        "email": "harshitmali@gmail.com",
-        "email2": "287233@gmail.com",
-        "permission": "Both",
-        "status": "#3",
-        "referenceName": "ghjgjty"
-      },
-      "id": 118
-    },
-    {
-      "values": {
-        "userId": "50",
-        "firstName": "dfhjft",
-        "lastName": "fng",
-        "phoneNumber": "854561612891456161",
-        "faxNo": "64",
-        "companyName": "563563",
-        "address": "221B Baker Street",
-        "city": "ergrg",
-        "zipCode": "123",
-        "country": "tyjtynjty",
-        "email": "v@example.com",
-        "email2": "287233@gmail.com",
-        "permission": "bidder",
-        "status": "#1",
-        "referenceName": "srtutr"
-      },
-      "id": 119
-    },
-    {
-      "values": {
-        "userId": "100",
         "firstName": "232323",
         "lastName": "fng",
         "phoneNumber": "6161644161",

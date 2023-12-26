@@ -11,19 +11,19 @@
 }
   .select-inp {
     width: 236px;
-    height: 36px;
+    height: 40px;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
   .DeadlineInp{
     width: 220px;
-    height: 36px;
+    height: 40px;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
   .BidInp{
     width: 220px;
-    height: 36px;
+    height: 40px;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
@@ -34,7 +34,7 @@
 
   .view-dateInp {
     border: 1px solid #ccc;
-    height: 36px;
+    height: 40px;
     border-radius: 4px;
     width: 211px;
   }
@@ -116,19 +116,19 @@
 
   .select-inp {
     width: 260px;
-    height: 36px;
+    height: 40px;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
   .DeadlineInp{
     width: 260px;
-    height: 36px;
+    height: 40px;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
   .BidInp{
     width: 260px;
-    height: 36px;
+    height: 40px;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
@@ -139,7 +139,7 @@
 
   .view-dateInp {
     border: 1px solid #ccc;
-    height: 36px;
+    height: 40px;
     border-radius: 4px;
     width: 260px;
   }
@@ -221,19 +221,19 @@
 
   .select-inp {
     width: 320px;
-    height: 36px;
+    height: 40px;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
   .DeadlineInp{
     width: 320px;
-    height: 36px;
+    height: 40px;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
   .BidInp{
     width: 320px;
-    height: 36px;
+    height: 40px;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
@@ -244,13 +244,13 @@
 
   .view-dateInp {
     border: 1px solid #ccc;
-    height: 36px;
+    height: 40px;
     border-radius: 4px;
     width: 320px;
   }
   .viewTimeInp{
     border: 1px solid #ccc;
-    height: 35px;
+    height: 40px;
     border-radius: 4px;
     width: 320px;
 
@@ -258,7 +258,7 @@
   }
   .startDateInp{
     border: 1px solid #ccc;
-    height: 35px;
+    height: 40px;
     border-radius: 4px;
     width: 320px;
 
@@ -266,7 +266,7 @@
 
   .startTimeInp{
     border: 1px solid #ccc;
-    height: 35px;
+    height: 40px;
     border-radius: 4px;
     width: 320px;
 
@@ -275,19 +275,19 @@
   /* 3rd row  */
   .endDateInp{
     border: 1px solid #ccc;
-    height: 35px;
+    height: 40px;
     border-radius: 4px;
     width: 320px;
   }
   .endTimeInp{
     border: 1px solid #ccc;
-    height: 35px;
+    height: 40px;
     border-radius: 4px;
     width: 320px;
   }
   .defaultIncrementInp{
     border: 1px solid #ccc;
-    height: 35px;
+    height: 40px;
     border-radius: 4px;
     width: 320px;
   }
@@ -309,6 +309,10 @@
   .auctionResult{
     border: 1px solid #ccc;
     width: 320px;
+
+  }
+  .nameInp{
+    height: 40px;
   }
   label{
     width: 205px;
@@ -355,7 +359,7 @@
       width: 200px;
 
       border: 1px solid #ccc;
-      height: 36px;
+      height: 40px;
       border-radius: 4px;
       position: relative;
       left: 7px;
@@ -369,7 +373,7 @@
 
     .view-dateInp {
       border: 1px solid #ccc;
-      height: 36px;
+      height: 40px;
       border-radius: 4px;
       width: 211px;
     }
@@ -419,13 +423,13 @@
     /* 5th row  */
     .DeadlineInp{
       width: 200px;
-      height: 36px;
+      height: 40px;
       border: 1px solid #ccc;
       border-radius: 4px;
     }
     .BidInp{
       width: 200px;
-      height: 36px;
+      height: 40px;
       border: 1px solid #ccc;
       border-radius: 4px;
     }
@@ -485,7 +489,7 @@
     }
     .view-dateInp {
       border: 1px solid #ccc;
-      height: 36px;
+      height: 40px;
       border-radius: 4px;
       width: 211px;
     }
@@ -535,13 +539,13 @@
     /* 5th row  */
     .DeadlineInp{
       width: 200px;
-      height: 36px;
+      height: 40px;
       border: 1px solid #ccc;
       border-radius: 4px;
     }
     .BidInp{
       width: 200px;
-      height: 36px;
+      height: 40px;
       border: 1px solid #ccc;
       border-radius: 4px;
     }
@@ -585,7 +589,7 @@
   
   }
    .select-inp {
-      width: 200px;
+      width: 300px;
       height: 35px;
       border: 1px solid #ccc;
       border-radius: 4px;
@@ -618,7 +622,7 @@
       border: 1px solid #ccc;
       height: 35px;
       border-radius: 4px;
-      width: 200px;
+      width: 300px;
         }
   }
 
@@ -632,7 +636,6 @@
   }
 
   
-  /* style={{ position: "relative", left: "65px" }} */
   .dashboard{
   position: relative;
   left: 65px;
@@ -648,7 +651,7 @@
   
   .nameInp{
     border: 1px solid #ccc;
-    height: 35px;
+    height: 40px;
     border-radius: 4px;
       }
   

@@ -13,7 +13,7 @@ function App() {
     {/* <MasterUser/> */}
     {/* <MasterAuction/> */}
     {/* <UserGrid/> */}
-    {/* <Header/> */}
+    <Header/>
     <Routes>
 
       <Route path='formeditmodal' element={<FormEditModal /> } />

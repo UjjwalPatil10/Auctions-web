@@ -582,20 +582,20 @@ function MasterUser() {
       .required("Required"),
     country: Yup.string().required("Required"),
     // email: Yup.string().email("Please, enter valid Email!").matches(EMAIL_REGX).required("Required"),
-    email2: Yup.string()
-      .email("please enter valid email")
-      .matches(
-        /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-        "please enter valid email"
-      )
-      .required("Required"),
-    email: Yup.string()
-      .email("please enter valid email")
-      .matches(
-        /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-        "please enter valid email"
-      )
-      .required("Required"),
+    // email2: Yup.string()
+    //   .email("please enter valid email")
+    //   .matches(
+    //     /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+    //     "please enter valid email"
+    //   )
+    //   .required("Required"),
+    // email: Yup.string()
+    //   .email("please enter valid email")
+    //   .matches(
+    //     /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+    //     "please enter valid email"
+    //   )
+      // .required("Required"),
     permission: Yup.string().required("Required"),
     status: Yup.string().required("Required"),
     referenceName: Yup.string().required("Required"),
@@ -669,9 +669,9 @@ function MasterUser() {
                     name="phoneNumber"
                     
                   />
-                   {/* {isFocused && (
+                   {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
-                )} */}
+                )}
                   </div>
                   </div>
 
@@ -687,9 +687,9 @@ function MasterUser() {
                     name="faxNo"
                     options={selectOptions}
                   />
-                    {/* {isFocused && (
+                    {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
-                )} */}
+                )}
                   </div>
                   </div>
                   <div className="col-md-4 col-sm-6">
@@ -702,9 +702,9 @@ function MasterUser() {
                     label="viewing date"
                     name="companyName"
                   />
-                    {/* {isFocused && (
+                    {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
-                )} */}
+                )}
                   </div>
                   </div>
                 </div>
@@ -721,9 +721,9 @@ function MasterUser() {
                     label="Viewing Time"
                     name="phoneNumber1"
                   />
-                  {/* {isFocused && (
+                  {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
-                )} */}
+                )}
                   </div>
                   </div>
                   <div className="col-md-4 col-sm-6">
@@ -736,9 +736,9 @@ function MasterUser() {
                     label="Start Date"
                     name="start"
                   />
-                  {/* {isFocused && (
+                  {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
-                )} */}
+                )}
                   
                   </div>
 </div>
@@ -752,9 +752,9 @@ function MasterUser() {
                     label="Start Time"
                     name="companyName1"
                   />
-                  {/* {isFocused && (
+                  {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
-                )} */}
+                )}
                   </div>
                   </div>
                 </div>
@@ -771,9 +771,9 @@ function MasterUser() {
                     label="End Date"
                     name="address"
                   />
-                  {/* {isFocused && (
+                  {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
-                )} */}
+                )}
                   </div>
                   </div>
                   <div className="col-md-4 col-sm-6">
@@ -786,9 +786,9 @@ function MasterUser() {
                     label="End Time"
                     name="city1"
                   />
-                  {/* {isFocused && (
+                  {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
-                )} */}
+                )}
                   </div>
 </div>
 
@@ -802,9 +802,9 @@ function MasterUser() {
                     label="Default Bid Increment By"
                     name="zipCode"
                   />
-                  {/* {isFocused && (
+                  {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
-                )} */}
+                )}
                   </div>
                   </div>
                 </div>
@@ -841,9 +841,9 @@ function MasterUser() {
                     required
                     style={{ border: "1px solid #ccc" }}
                 />
-                {/* {isFocused && (
+                {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
-                )} */}
+                )}
             </div>
         </div>
 
@@ -942,9 +942,9 @@ function MasterUser() {
                     name="faxNos"
                     options={extendOptions}
                   />
-                   {/* {isFocused && (
+                   {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
-                )} */}
+                )}
                   </div>
                   </div>
 
@@ -958,9 +958,9 @@ function MasterUser() {
                     label="Extend Deadline within Value"
                     name="city"
                   />
-                   {/* {isFocused && (
+                   {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
-                )} */}
+                )}
                   </div>
 </div>
 
@@ -974,9 +974,9 @@ function MasterUser() {
                     label="No of Times Bid Extend"
                     name="zipCode1"
                   />
-                   {/* {isFocused && (
+                   {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
-                )} */}
+                )}
                   </div>
                   </div>
                 </div>
@@ -995,9 +995,9 @@ function MasterUser() {
                     name="fax"
                     options={viewsOptions}
                   />
-                   {/* {isFocused && (
+                   {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
-                )} */}
+                )}
                   </div>
 </div>
 <div className="col-md-2">
@@ -1011,9 +1011,9 @@ className={`mt-3 auction-mode ${isFocused ? 'focused' : ''}`}
                     name="fax1"
                     options={activeOptions}
                   />
-                   {/* {isFocused && (
+                   {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
-                )} */}
+                )}
                   </div>
 </div>
 <div className="col-md-8 ">
@@ -1025,9 +1025,9 @@ className={`mt-3 auction-mode ${isFocused ? 'focused' : ''}`}
                     label="Description"
                     name="description"
                   />
-                   {/* {isFocused && (
+                   {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
-                )} */}
+                )}
                   </div>
                   </div>
                 </div>
