@@ -142,7 +142,6 @@ export const UserGrid = () => {
         Add New User
     </button>
 </div>
-<div className="container-fluid table-container" style={{ overflowX: "auto" }}>
       <table {...getTableProps()}>
         <thead>
           {headerGroups.map((headerGroup) => (
@@ -225,7 +224,6 @@ export const UserGrid = () => {
           )}
         </tbody>
       </table>
-      </div>
       <br />
       <div className="d-flex justify-content-center gap-2 mb-5">
       <select
@@ -292,7 +290,6 @@ export const UserGrid = () => {
           {">>"}
         </button>
       </div>
-
       <pre>
         <code>
           {/* {JSON.stringify(

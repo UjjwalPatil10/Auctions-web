@@ -11,19 +11,19 @@
 }
   .select-inp {
     width: 236px;
-    height: 40px;
+    height: 36px;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
   .DeadlineInp{
     width: 220px;
-    height: 40px;
+    height: 36px;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
   .BidInp{
     width: 220px;
-    height: 40px;
+    height: 36px;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
@@ -34,7 +34,7 @@
 
   .view-dateInp {
     border: 1px solid #ccc;
-    height: 40px;
+    height: 36px;
     border-radius: 4px;
     width: 211px;
   }
@@ -116,19 +116,19 @@
 
   .select-inp {
     width: 260px;
-    height: 40px;
+    height: 36px;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
   .DeadlineInp{
     width: 260px;
-    height: 40px;
+    height: 36px;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
   .BidInp{
     width: 260px;
-    height: 40px;
+    height: 36px;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
@@ -139,7 +139,7 @@
 
   .view-dateInp {
     border: 1px solid #ccc;
-    height: 40px;
+    height: 36px;
     border-radius: 4px;
     width: 260px;
   }
@@ -218,39 +218,43 @@
     --bs-modal-width: 1110px;
 
   }
-
+.nameInp{
+  height: 36px;
+}
   .select-inp {
     width: 320px;
-    height: 40px;
+    height: 36px;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
   .DeadlineInp{
     width: 320px;
-    height: 40px;
+    height: 36px;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
   .BidInp{
     width: 320px;
-    height: 40px;
+    height: 36px;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
 
   .auction-name {
     width: 320px;
+    height: 36px;
+
   }
 
   .view-dateInp {
     border: 1px solid #ccc;
-    height: 40px;
+    height: 36px;
     border-radius: 4px;
     width: 320px;
   }
   .viewTimeInp{
     border: 1px solid #ccc;
-    height: 40px;
+    height: 36px;
     border-radius: 4px;
     width: 320px;
 
@@ -258,7 +262,7 @@
   }
   .startDateInp{
     border: 1px solid #ccc;
-    height: 40px;
+    height: 36px;
     border-radius: 4px;
     width: 320px;
 
@@ -266,7 +270,7 @@
 
   .startTimeInp{
     border: 1px solid #ccc;
-    height: 40px;
+    height: 36px;
     border-radius: 4px;
     width: 320px;
 
@@ -275,19 +279,19 @@
   /* 3rd row  */
   .endDateInp{
     border: 1px solid #ccc;
-    height: 40px;
+    height: 36px;
     border-radius: 4px;
     width: 320px;
   }
   .endTimeInp{
     border: 1px solid #ccc;
-    height: 40px;
+    height: 36px;
     border-radius: 4px;
     width: 320px;
   }
   .defaultIncrementInp{
     border: 1px solid #ccc;
-    height: 40px;
+    height: 36px;
     border-radius: 4px;
     width: 320px;
   }
@@ -309,11 +313,8 @@
   .auctionResult{
     border: 1px solid #ccc;
     width: 320px;
+  }
 
-  }
-  .nameInp{
-    height: 40px;
-  }
   label{
     width: 205px;
   }
@@ -346,7 +347,7 @@
     .auction-name {
       width: 200px;
     }
-    /* style={{ border: "1px solid #ccc", height: "35px", borderRadius: "4px" }} */
+    /* style={{ border: "1px solid #ccc", height: "36px", borderRadius: "4px" }} */
    
     .select-inp {
       width: 200px;
@@ -359,7 +360,7 @@
       width: 200px;
 
       border: 1px solid #ccc;
-      height: 40px;
+      height: 36px;
       border-radius: 4px;
       position: relative;
       left: 7px;
@@ -373,7 +374,7 @@
 
     .view-dateInp {
       border: 1px solid #ccc;
-      height: 40px;
+      height: 36px;
       border-radius: 4px;
       width: 211px;
     }
@@ -423,13 +424,13 @@
     /* 5th row  */
     .DeadlineInp{
       width: 200px;
-      height: 40px;
+      height: 36px;
       border: 1px solid #ccc;
       border-radius: 4px;
     }
     .BidInp{
       width: 200px;
-      height: 40px;
+      height: 36px;
       border: 1px solid #ccc;
       border-radius: 4px;
     }
@@ -489,7 +490,7 @@
     }
     .view-dateInp {
       border: 1px solid #ccc;
-      height: 40px;
+      height: 36px;
       border-radius: 4px;
       width: 211px;
     }
@@ -539,13 +540,13 @@
     /* 5th row  */
     .DeadlineInp{
       width: 200px;
-      height: 40px;
+      height: 36px;
       border: 1px solid #ccc;
       border-radius: 4px;
     }
     .BidInp{
       width: 200px;
-      height: 40px;
+      height: 36px;
       border: 1px solid #ccc;
       border-radius: 4px;
     }
@@ -636,6 +637,7 @@
   }
 
   
+  /* style={{ position: "relative", left: "65px" }} */
   .dashboard{
   position: relative;
   left: 65px;
@@ -651,7 +653,7 @@
   
   .nameInp{
     border: 1px solid #ccc;
-    height: 40px;
+    height: 36px;
     border-radius: 4px;
       }
   

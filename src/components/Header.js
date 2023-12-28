@@ -45,7 +45,7 @@ const Header = () => {
                             </Modal.Header>
                             <Modal.Body>
                                 <div className="yup">
-                                    <Link to="/master" className="border-0 bg-white text-black  text-decoration-none m-3 color bg-danger hover-effect">
+                                    <Link to="/masterAuctionForm" className="border-0 bg-white text-black  text-decoration-none m-3 color bg-danger hover-effect">
                                         Master
                                     </Link>
                                     <Link to="/details" className="border-0 bg-white text-black text-decoration-none m-3 hover-effect">
@@ -58,7 +58,7 @@ const Header = () => {
                                 <hr />
                                 <div>
                                     <Routes>
-                                        <Route path="/master" element={<Master />} />
+                                        <Route path="/masterAuctionForm" element={<Master />} />
                                         {/* <Route path="/details" element={<Details />} /> */}
                                         {/* <Route path="/stockfile" element={<StockFile />} /> */}
                                     </Routes>

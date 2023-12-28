@@ -21,6 +21,10 @@ function AuctionFormikControl(props) {
 
         case 'checkbox':
           return <CheckboxGroup {...rest} />;
+
+        // case 'checkbox':
+        //   return <Checkbox {...rest} />;
+
           case 'textarea':
             return <TextArea {...rest} />;
          
