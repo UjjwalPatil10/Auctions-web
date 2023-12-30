@@ -6,6 +6,7 @@ import MasterUser from './shared/MasterUser';
 import FormEditModal from './components/user_module/FormEditModal';
 import Header from './components/Header';
 import MasterAuction from "./components/Modal/Master"
+import MasterTable from './components/MyOwnFolder/MasterTable';
 
 function App() {
   return (
@@ -13,12 +14,14 @@ function App() {
     {/* <MasterUser/> */}
     {/* <MasterAuction/> */}
     {/* <UserGrid/> */}
-    <Header/>
+    {/* <Header/> */}
     <Routes>
 
       <Route path='formeditmodal' element={<FormEditModal /> } />
       <Route path='usergrid' element={<UserGrid />} />
       <Route path='masteruser' element={<MasterUser /> } />
+      <Route path='masterAuctionTable' element={<MasterTable/> } />
+
 
     </Routes>  
     </>

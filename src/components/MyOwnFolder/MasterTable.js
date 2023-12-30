@@ -238,7 +238,7 @@ const handleView = (id) => {
   // Implement view logic
   console.log(`View row with ID ${id}`);
 };
-export default function DataGridDemo() {
+export default function MasterTable() {
  
 
 
