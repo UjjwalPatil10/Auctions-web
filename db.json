@@ -182,26 +182,6 @@
     },
     {
       "values": {
-        "userId": "100",
-        "firstName": "232323",
-        "lastName": "fng",
-        "phoneNumber": "6161644161",
-        "faxNo": "64",
-        "companyName": "samyak",
-        "address": "gbdgb",
-        "city": "fgbhgf",
-        "zipCode": "8786386",
-        "country": "72872",
-        "email": "27522@gmail.com",
-        "email2": "vickymali@gmail.com",
-        "permission": "Both",
-        "status": "#3",
-        "referenceName": "rth"
-      },
-      "id": 120
-    },
-    {
-      "values": {
         "userId": "1",
         "firstName": "Harshit",
         "lastName": "mali",
@@ -1159,46 +1139,6 @@
         "referenceName": "gftrhftrhtr"
       },
       "id": 168
-    },
-    {
-      "values": {
-        "userId": "100",
-        "firstName": "Harshit",
-        "lastName": "Mali",
-        "phoneNumber": "6264670881",
-        "faxNo": "6166456",
-        "companyName": "samyak",
-        "address": "dhule",
-        "city": "dhule",
-        "zipCode": "53572",
-        "country": "india",
-        "email": "harshit@gmail.com",
-        "email2": "vickymali@gmail.com",
-        "permission": "bidder",
-        "status": "active",
-        "referenceName": "samyak"
-      },
-      "id": 169
-    },
-    {
-      "values": {
-        "userId": "pw123",
-        "firstName": "prashant",
-        "lastName": "wagh",
-        "phoneNumber": "6420952286",
-        "faxNo": "123456",
-        "companyName": "Samyak",
-        "address": "Dhule",
-        "city": "Dhule",
-        "zipCode": "369852",
-        "country": "Bahrain",
-        "email": "prashant@gmail.com",
-        "email2": "pw@gmail.com",
-        "permission": "auctioneer",
-        "status": "active",
-        "referenceName": "samyak"
-      },
-      "id": 170
     }
   ]
 }

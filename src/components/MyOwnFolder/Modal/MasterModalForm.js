@@ -254,27 +254,28 @@
 import React from "react";
 import { Formik, Form, useFormik } from "formik";
 import * as Yup from "yup";
-import AuctionFormikControl from "../../shared/AuctionFormikControl";
+import AuctionFormikControl from "../../../shared/AuctionFormikControl";
 import axios from "axios";
 import Modal from "react-modal";
-import "../css1/header.css";
+import "../../css1/header.css";
 import { useState } from "react";
-import AuctionLoadAnimation from "../../shared/AuctionLoadAnimation";
+import AuctionLoadAnimation from "../../../shared/AuctionLoadAnimation";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Checkbox } from "../../shared/FormCheckBox";
-function MasterUser() {
+// import { Checkbox } from "../../shared/FormCheckBox";
+function MasterModalForm() {
+  const [data,setData] = useState({})
   const [loading, setLoading] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [isFocused, setIsFocused] = useState(false);
 
-    const handleFocus = () => {
-        setIsFocused(true);
-    };
+  const handleFocus = () => {
+    setIsFocused(true);
+  };
 
-    const handleBlur = () => {
-        setIsFocused(false);
-    };
+  const handleBlur = () => {
+    setIsFocused(false);
+  };
 
   const auctionInventory = [
     { key: "Please select", value: "auctioneer" },
@@ -289,21 +290,20 @@ function MasterUser() {
 
     { key: "Option #3", value: "#3" },
   ];
- 
+
   const selectOptions = [
     { key: "Please Select", value: "" },
-    { key: "Certificate", value: "#2" },
-    { key: "Option #2", value: "#3" },
-    { key: "Option #3", value: "#3" },
+    { key: "Certificate", value: "certificate" },
+    { key: "Option #2", value: "2" },
+    { key: "Option #3", value: "3" },
   ];
 
   const extendOptions = [
     { key: "Please Select", value: "select" },
     { key: "Minutes", value: "minutes" },
-    { key: "Option #2", value: "" },
-    { key: "Option #3", value: "#3" },
+    { key: "Option #2", value: "2" },
+    { key: "Option #3", value: "3" },
   ];
-
 
   const dropdownOptionsForCountry = [
     { key: "Select a country", value: "" },
@@ -553,22 +553,19 @@ function MasterUser() {
     auctionMode: "",
     recordStatus: "",
     description: "",
-    checkboxOption:[],
-    checkbox1:""
- 
+    checkboxOption: [],
+    checkbox1: "",
   };
 
   const validationSchema = Yup.object({
     // userId: Yup.string().required("Required"),
     // firstName: Yup.string().required("Required"),
-    
+
     // phoneNumber: Yup.string()
     //   .matches("^[0-9]{10}$", "Only 10 digits allow")
     //   .required("Required"),
-    auctionName : Yup.string().required("Required"),
-    auctionInventory: Yup.string()
-      .matches(/^[0-9]+$/, "Only numbers allowed")
-      .required("Required"),
+    auctionName: Yup.string().required("Required"),
+    auctionInventory: Yup.string().required("Required"),
     viewingDate: Yup.string().required("Required"),
     viewTime: Yup.string().required("Required"),
     startDate: Yup.string().required("Required"),
@@ -577,86 +574,75 @@ function MasterUser() {
     endTime: Yup.string().required("Required"),
     defaultBid: Yup.string().required("Required"),
     auctionResult: Yup.string().required("Required"),
+
     extendDeadlineType: Yup.string().required("Required"),
     extendDeadlineValue: Yup.string().required("Required"),
     noofBid: Yup.string().required("Required"),
     auctionMode: Yup.string().required("Required"),
     recordStatus: Yup.string().required("Required"),
     description: Yup.string().required("Required"),
-    checkboxOption:Yup.array().required("Required"),
+    // checkboxOption: Yup.array().required("Required"),
     // checkbox1:Yup.array().required("Required")
-
-
   });
 
-  
-    // phoneNumber1: Yup.string().required("Required"),
-    // start: Yup.string().required("Required"),
-    // companyName1: Yup.string().required("Required"),
-    // address: Yup.string().required("Required"),
-    // address2: Yup.string().required("Required"),
-    // address1: Yup.string().required("Required"),
-    // city: Yup.string().required("Required"),
-    // city1: Yup.string().required("Required"),
-    // faxNos: Yup.string().required("Required"),
-    // zipCode1: Yup.string().required("Required"),
-    // fax1: Yup.string().required("Required"),
-    // fax: Yup.string().required("Required"),
-    // zipCode: Yup.string().required("Required")
-    //   .matches(/^[0-9]+$/, "Only numbers allowed")
-    //   .required("Required"),
-    // country: Yup.string().required("Required"),
-    // email: Yup.string().email("Please, enter valid Email!").matches(EMAIL_REGX).required("Required"),
-    // email2: Yup.string()
-    //   .email("please enter valid email")
-    //   .matches(
-    //     /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-    //     "please enter valid email"
-    //   )
-    //   .required("Required"),
-    // email: Yup.string()
-    //   .email("please enter valid email")
-    //   .matches(
 
-    //     /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-    //     "please enter valid email"
-    //   )
-    //   .required("Required"),
-    // permission: Yup.string().required("Required"),
-    // status: Yup.string().required("Required"),
-    // referenceName: Yup.string().required("Required"),
-    // checkboxOption: Yup.array().required("Required"),
-    // description: Yup.string().required("Required"),
+  //   .matches(/^[0-9]+$/, "Only numbers allowed")
+  //   .required("Required"),
+  // country: Yup.string().required("Required"),
+  // email: Yup.string().email("Please, enter valid Email!").matches(EMAIL_REGX).required("Required"),
+  // email2: Yup.string()
+  //   .email("please enter valid email")
+  //   .matches(
+  //     /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+  //     "please enter valid email"
+  //   )
+  //   .required("Required"),
+  // email: Yup.string()
+  //   .email("please enter valid email")
+  //   .matches(
+
+  //     /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+  //     "please enter valid email"
+  //   )
+  //   .required("Required"),
+  // permission: Yup.string().required("Required"),
+  // status: Yup.string().required("Required"),
+  // referenceName: Yup.string().required("Required"),
+  // checkboxOption: Yup.array().required("Required"),
+  // description: Yup.string().required("Required"),
   // });
 
   // const toast = useToast(false);
 
   const onSubmit = (values, submitProps) => {
-    setLoading(true);
+    // setLoading(true); // Set loading to true when the form is submitted
 
-    axios
-      .post("http://localhost:4000/users", { values })
-      .then((response) => {
-        console.log(response);
-        if (response.status === 204) {
-          console.log("success");
-          toast.success("Successfully Saved", {
-            position: toast.POSITION.TOP_CENTER,
-          });
-        }
-      })
+    // "http://localhost:8080/api/v1/auction"
+    console.log("Form Values:", values);
+    setData(values)
+    // axios
+    //   .post("http://localhost:4000/users", { values })
+    //   .then((response) => {
+    //     console.log("Response",response);
+    //     if (response.status === 204) {
+    //       console.log("success");
+    //       toast.success("Successfully Saved", {
+    //         position: toast.POSITION.TOP_CENTER,
+    //       });
+    //     }
+    //   })
 
-      .catch((e) => {
-        console.log("e:", e);
-        toast.error("Something went wrong", {
-          position: toast.POSITION.TOP_CENTER,
-          autoClose: true,
-        });
-      })
-      .finally(() => {
-        setLoading(false);
-        submitProps.setSubmitting(false);
-      });
+    //   .catch((e) => {
+    //     console.log("e:", e);
+    //     toast.error("Something went wrong", {
+    //       position: toast.POSITION.TOP_CENTER,
+    //       autoClose: true,
+    //     });
+    //   })
+    //   .finally(() => {
+    //     setLoading(false);
+    //     submitProps.setSubmitting(false);
+    //   });
   };
 
   if (loading) {
@@ -673,7 +659,7 @@ function MasterUser() {
         {(formik) => {
           return (
             <div className="container-fluid">
-              <Form autocomplete="off">
+              <Form  autocomplete="off">
                 {/* <div className="border border-3 border-primary h-90"></div>
                 <h2 className="ml-10 fw-bold mb-2">User Registration</h2>
                 <br></br>
@@ -682,198 +668,202 @@ function MasterUser() {
                 </p> */}
                 {/* 1st row  */}
                 <div className="row mt-2">
+                  <div className="col-md-4 col-sm-6">
+                    <div className="form-group">
+                      <AuctionFormikControl
+                        className={`auction-name nameInp form-control mt-2 form-control auctionResult ${
+                          isFocused ? "focused" : ""
+                        }`}
+                        control="input"
+                        type="text"
+                        label="Auction Name"
+                        name="auctionName"
+                        
+                      />
+                      {/* {isFocused && (
+                    <small style={{ color: "red",fontSize:"px" }}>Required</small>
+                )} */}
+                    </div>
+                  </div>
 
                   <div className="col-md-4 col-sm-6">
                     <div className="form-group">
-
-                  <AuctionFormikControl
-                    className={`auction-name nameInp form-control mt-2 form-control auctionResult ${isFocused ? 'focused' : ''}`}
-
-                    control="input"
-                    type="text"
-                    label="Auction Name"
-                    name="auctionName"
-                    
-                  />
-                   {/* {isFocused && (
+                      <AuctionFormikControl
+                        className={`select-inp input-group mt-2 ${
+                          isFocused ? "focused" : ""
+                        }`}
+                        control="select"
+                        type="text"
+                        label="Auction Inventory"
+                        name="auctionInventory"
+                        options={selectOptions}
+                      />
+                      {/* {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
                 )} */}
-                  </div>
-                  </div>
-
-                  <div className="col-md-4 col-sm-6">
-                  <div className="form-group">
-
-                  <AuctionFormikControl
-                  className={`select-inp input-group mt-2 ${isFocused ? 'focused' : ''}`}
-                    control="select"
-                    
-                    type="text"
-                    label="Auction Inventory"
-                    name="auctionInventory"
-                    options={selectOptions}
-                  />
-                    {/* {isFocused && (
-                    <small style={{ color: "red",fontSize:"px" }}>Required</small>
-                )} */}
-                  </div>
+                    </div>
                   </div>
                   <div className="col-md-4 col-sm-6">
-                  <div className="form-group">
-
-                  <AuctionFormikControl
-                  className={`form-control view-dateInp mt-2 ${isFocused ? 'focused' : ''}`}
-                    control="input"
-                    type="text"
-                    label="viewing date"
-                    name="viewingDate"
-                  />
-                    {/* {isFocused && (
+                    <div className="form-group">
+                      <AuctionFormikControl
+                        className={`form-control view-dateInp mt-2 ${
+                          isFocused ? "focused" : ""
+                        }`}
+                        control="input"
+                        type="text"
+                        label="viewing date"
+                        name="viewingDate"
+                      />
+                      {/* {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
                 )} */}
-                  </div>
+                    </div>
                   </div>
                 </div>
                 <br />
                 {/* 2nd row  */}
                 <div className="row">
-                <div className="col-md-4 col-sm-6">
-                <div className="form-group">
-
-                  <AuctionFormikControl
-                  className={`form-control mt-2 viewTimeInp ${isFocused ? 'focused' : ''}`}
-                    control="input"
-                    type="text"
-                    label="Viewing Time"
-                    name="viewTime"
-                  />
-                  {/* {isFocused && (
+                  <div className="col-md-4 col-sm-6">
+                    <div className="form-group">
+                      <AuctionFormikControl
+                        className={`form-control mt-2 viewTimeInp ${
+                          isFocused ? "focused" : ""
+                        }`}
+                        control="input"
+                        type="text"
+                        label="Viewing Time"
+                        name="viewTime"
+                      />
+                      {/* {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
                 )} */}
-                  </div>
+                    </div>
                   </div>
                   <div className="col-md-4 col-sm-6">
-                  <div className="form-group">
-
-                  <AuctionFormikControl
-                  className={`form-control mt-2 startDateInp ${isFocused ? 'focused' : ''}`}
-                    control="input"
-                    type="text"
-                    label="Start Date"
-                    name="startDate"
-                  />
-                  {/* {isFocused && (
+                    <div className="form-group">
+                      <AuctionFormikControl
+                        className={`form-control mt-2 startDateInp ${
+                          isFocused ? "focused" : ""
+                        }`}
+                        control="input"
+                        type="text"
+                        label="Start Date"
+                        name="startDate"
+                      />
+                      {/* {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
                 )} */}
-                  
+                    </div>
                   </div>
-</div>
-<div className="col-md-4 col-sm-6">
-<div className="form-group">
-
-                  <AuctionFormikControl
-                  className={`form-control mt-2 startTimeInp ${isFocused ? 'focused' : ''}`}
-                    control="input"
-                    type="text"
-                    label="Start Time"
-                    name="startTime"
-                  />
-                  {/* {isFocused && (
+                  <div className="col-md-4 col-sm-6">
+                    <div className="form-group">
+                      <AuctionFormikControl
+                        className={`form-control mt-2 startTimeInp ${
+                          isFocused ? "focused" : ""
+                        }`}
+                        control="input"
+                        type="text"
+                        label="Start Time"
+                        name="startTime"
+                      />
+                      {/* {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
                 )} */}
-                  </div>
+                    </div>
                   </div>
                 </div>
                 <br />
                 {/* 3rd row  */}
                 <div className="row">
-                <div className="col-md-4 col-sm-6">
-                <div className="form-group">
-
-                  <AuctionFormikControl
-                  className={`form-control mt-2 endDateInp ${isFocused ? 'focused' : ''}`}
-                    control="input"
-                    type="text"
-                    label="End Date"
-                    name="endDate"
-                  />
-                  {/* {isFocused && (
+                  <div className="col-md-4 col-sm-6">
+                    <div className="form-group">
+                      <AuctionFormikControl
+                        className={`form-control mt-2 endDateInp ${
+                          isFocused ? "focused" : ""
+                        }`}
+                        control="input"
+                        type="text"
+                        label="End Date"
+                        name="endDate"
+                      />
+                      {/* {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
                 )} */}
-                  </div>
+                    </div>
                   </div>
                   <div className="col-md-4 col-sm-6">
-                  <div className="form-group">
-                  <AuctionFormikControl
-                  className={`form-control mt-2 endDateInp ${isFocused ? 'focused' : ''}`}
-                    control="input"
-                    type="text"
-                    label="End Time"
-                    name="endTime"
-                  />
+                    <div className="form-group">
+                      <AuctionFormikControl
+                        className={`form-control mt-2 endDateInp ${
+                          isFocused ? "focused" : ""
+                        }`}
+                        control="input"
+                        type="text"
+                        label="End Time"
+                        name="endTime"
+                      />
 
-                  {/* <AuctionFormikControl
+                      {/* <AuctionFormikControl
                   className={`form-control mt-2 endTimeInp ${isFocused ? 'focused' : ''}`}
                     control="input"
                     type="text"
                     label="End Time"
                     name="city1"
                   /> */}
-                  {/* {isFocused && (
+                      {/* {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
                 )} */}
+                    </div>
                   </div>
-</div>
 
-<div className="col-md-4 col-sm-6">
-<div className="form-group">
-
-                  <AuctionFormikControl
-                  className={`form-control mt-2 defaultIncrementInp ${isFocused ? 'focused' : ''}`}
-                    control="input"
-                    type="text"
-                    label="Default Bid Increment By"
-                    name="defaultBid"
-                  />
-                  {/* {isFocused && (
+                  <div className="col-md-4 col-sm-6">
+                    <div className="form-group">
+                      <AuctionFormikControl
+                        className={`form-control mt-2 defaultIncrementInp ${
+                          isFocused ? "focused" : ""
+                        }`}
+                        control="input"
+                        type="text"
+                        label="Default Bid Increment By"
+                        name="defaultBid"
+                      />
+                      {/* {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
                 )} */}
-                  </div>
+                    </div>
                   </div>
                 </div>
                 <br />
 
                 {/* 4th row  */}
                 <div className="row mt-4">
-                            {/* <div className="col-md-4">
+                  {/* <div className="col-md-4">
                                 <div className="form-group auction-result">
                                     <label for="aucresdate" className="form-control-label">Auction Result Date</label>
                                 </div>
                             </div> */}
 
-                            <div className="col-md-4">
-                                <div className="form-group ">
-
-                                </div>
-                            </div>
-                            <div className="col-md-4">
-                                <div className="form-group">
-
-                                </div>
-                            </div>
-                        </div>
-                        {/* input field  */}
-                        <div className="row mt-2">
-                        <div className="col-md-4">
-            <div className="form-group">
-            <AuctionFormikControl
-                  className={`form-control mt-2 endDateInp ${isFocused ? 'focused' : ''}`}
-                    control="input"
-                    type="text"
-                    label="Auction Result Date"
-                    name="auctionResult"
-                  />
-                {/* <input
+                  <div className="col-md-4">
+                    <div className="form-group "></div>
+                  </div>
+                  <div className="col-md-4">
+                    <div className="form-group"></div>
+                  </div>
+                </div>
+                {/* input field  */}
+                <div className="row mt-2">
+                  <div className="col-md-4">
+                    <div className="form-group">
+                      <AuctionFormikControl
+                        className={`form-control mt-2 endDateInp ${
+                          isFocused ? "focused" : ""
+                        }`}
+                        control="input"
+                        type="text"
+                        label="Auction Result Date"
+                        name="auctionResult"
+                      />
+                      {/* <input
                     type="text"
                     id="aucresdate"
                     className={`form-control auctionResult ${isFocused ? 'focused' : ''}`}
@@ -882,54 +872,84 @@ function MasterUser() {
                     required
                     style={{ border: "1px solid #ccc" }}
                 /> */}
-                {/* {isFocused && (
+                      {/* {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
                 )} */}
-            </div>
-        </div>
+                    </div>
+                  </div>
 
-                            <div className="col-md-8">
-                                <div className="form-group">
-                                    <div className="row">
-                                      {/* <AuctionFormikControl
+                  <div className="col-md-8 mt-4">
+                    <div className="form-group">
+                      <div className="row">
+                        {/* <AuctionFormikControl
                                       control="checkbox"
                                       name="checkboxOption"
                                       
                                       options={checkboxOptions}
                                       /> */}
-                                        <div className="col">
-                                            <div className="checkbox">
-                                                <label for="checkbox1" className="form-check-label">
-                                                <input type="checkbox" id="checkbox1" name="checkbox1" value="option3" className="form-check-input" style={{ border: "1px solid gray" }} 
-                                                
-                                                /> 
-                                                <span> Hide Bulk Bid</span>
-
-                                                </label>
-                                                {formik.touched.checkbox1 && formik.errors.checkbox1 && (
-                    <small style={{ color: "red", fontSize: "12px" }}>{formik.errors.checkbox1}</small>
-                  )}
-                                            </div>
-                                        </div>
-                                        <div className="col">
-                                            <div className="checkbox">
-                                                <label for="checkbox2" className="form-check-label">
-                                                <input  type="checkbox" id="checkbox2" name="checkbox2" value="option3" className="form-check-input" style={{ border: "1px solid gray" }} /> <span>Allow Proxy Bid</span>
-
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <div className="col">
-                                            <div className="checkbox">
-                                                <label for="checkbox3" className="form-check-label">
-                                                    <input  type="checkbox" id="checkbox3" name="checkbox3" value="option3" className="form-check-input" style={{ border: "1px solid gray" }} /> <span>Allow PopCorn Bid</span>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div className="col">
+                          <div className="checkbox">
+                            <label for="checkbox1" className="form-check-label">
+                           <AuctionFormikControl
+                                      control="checkbox"
+                                      name="checkboxOption"
+                                      
+                                      options={checkboxOptions}
+                                      />
+                              {/* <input
+                                type="checkbox"
+                                id="checkbox1"
+                                name="checkboxOption"
+                                value="option3"
+                                className="form-check-input"
+                                style={{ border: "1px solid gray" }}
+                              /> */}
+                              {/* <span> Hide Bulk Bid</span> */}
+                            </label>
+                            {/* {formik.touched.checkbox1 &&
+                              formik.errors.checkbox1 && (
+                                <small
+                                  style={{ color: "red", fontSize: "12px" }}
+                                >
+                                  {formik.errors.checkbox1}
+                                </small>
+                              )} */}
+                          </div>
                         </div>
+                        <div className="col">
+                          <div className="checkbox">
+                            <label for="checkbox2" className="form-check-label">
+                              {/* <input
+                                type="checkbox"
+                                id="checkbox2"
+                                name="checkbox2"
+                                value="option3"
+                                className="form-check-input"
+                                style={{ border: "1px solid gray" }}
+                              />{" "} */}
+                              {/* <span>Allow Proxy Bid</span> */}
+                            </label>
+                          </div>
+                        </div>
+                        <div className="col">
+                          <div className="checkbox">
+                            <label for="checkbox3" className="form-check-label">
+                              {/* <input
+                                type="checkbox"
+                                id="checkbox3"
+                                name="checkbox3"
+                                value="option3"
+                                className="form-check-input"
+                                style={{ border: "1px solid gray" }}
+                              />{" "} */}
+                              {/* <span>Allow PopCorn Bid</span> */}
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 {/* <div class="row mt-4">
                   <div class="col-md-4">
                   <div class="form-group auction-result">
@@ -944,9 +964,8 @@ function MasterUser() {
                     </div>
                     </div> */}
 
-
-{/* checkbox  */}
-                  {/* <div className="row mt-2"
+                {/* checkbox  */}
+                {/* <div className="row mt-2"
                 
                   >
                     <div className="col-md-4">
@@ -980,114 +999,117 @@ function MasterUser() {
                   </div> */}
                 <br />
 
-
                 {/* 5th row  */}
                 <div className="row">
-                <div className="col-md-4 col-sm-6">
-                <div className="form-group">
-
-                  <AuctionFormikControl
-                  className={`select-inp input-group mt-2 ${isFocused ? 'focused' : ''}`}
-                    control="select"
-                    
-                    type="text"
-                    label="Extend Deadline within Type"
-                    name="extendDeadlineType"
-                    options={extendOptions}
-                  />
-                   {/* {isFocused && (
+                  <div className="col-md-4 col-sm-6">
+                    <div className="form-group">
+                      <AuctionFormikControl
+                        className={`select-inp input-group mt-2 ${
+                          isFocused ? "focused" : ""
+                        }`}
+                        control="select"
+                        type="text"
+                        label="Extend Deadline within Type"
+                        name="extendDeadlineType"
+                        options={extendOptions}
+                      />
+                      {/* {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
                 )} */}
-                  </div>
+                    </div>
                   </div>
 
                   <div className="col-md-4 col-sm-6">
-                  <div className="form-group">
-
-                  <AuctionFormikControl
-                  className={`form-control mt-2 DeadlineInp ${isFocused ? 'focused' : ''}`}
-                    control="input"
-                    type="text"
-                    label="Extend Deadline within Value"
-                    name="extendDeadlineValue"
-                  />
-                   {/* {isFocused && (
+                    <div className="form-group">
+                      <AuctionFormikControl
+                        className={`form-control mt-2 DeadlineInp ${
+                          isFocused ? "focused" : ""
+                        }`}
+                        control="input"
+                        type="text"
+                        label="Extend Deadline within Value"
+                        name="extendDeadlineValue"
+                      />
+                      {/* {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
                 )} */}
+                    </div>
                   </div>
-</div>
 
-<div className="col-md-4 col-sm-6">
-<div className="form-group">
-
-                  <AuctionFormikControl
-                  className={`form-control mt-2 BidInp ${isFocused ? 'focused' : ''}`}
-                    control="input"
-                    type="text"
-                    label="No of Times Bid Extend"
-                    name="noofBid"
-                  />
-                   {/* {isFocused && (
+                  <div className="col-md-4 col-sm-6">
+                    <div className="form-group">
+                      <AuctionFormikControl
+                        className={`form-control mt-2 BidInp ${
+                          isFocused ? "focused" : ""
+                        }`}
+                        control="input"
+                        type="text"
+                        label="No of Times Bid Extend"
+                        name="noofBid"
+                      />
+                      {/* {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
                 )} */}
-                  </div>
+                    </div>
                   </div>
                 </div>
                 <br />
                 {/* 6th row  */}
-         
-<div className="row mt-4">
-<div className="col-md-2">
-<div className="form-group">
-                  <AuctionFormikControl
-                  className={`mt-3 auction-mode ${isFocused ? 'focused' : ''}`}
-                    control="select"
-                    
-                    type="text"
-                    label="Auction Mode"
-                    name="auctionMode"
-                    options={viewsOptions}
-                  />
-                   {/* {isFocused && (
+
+                <div className="row mt-4">
+                  <div className="col-md-2">
+                    <div className="form-group">
+                      <AuctionFormikControl
+                        className={`mt-3 auction-mode ${
+                          isFocused ? "focused" : ""
+                        }`}
+                        control="select"
+                        type="text"
+                        label="Auction Mode"
+                        name="auctionMode"
+                        options={viewsOptions}
+                      />
+                      {/* {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
                 )} */}
+                    </div>
                   </div>
-</div>
-<div className="col-md-2">
-<div className="form-group">
-<AuctionFormikControl
-className={`mt-3 auction-mode ${isFocused ? 'focused' : ''}`}
-                    control="select"
-                  
-                    type="text"
-                    label="Record Status"
-                    name="recordStatus"
-                    options={activeOptions}
-                  />
-                   {/* {isFocused && (
+                  <div className="col-md-2">
+                    <div className="form-group">
+                      <AuctionFormikControl
+                        className={`mt-3 auction-mode ${
+                          isFocused ? "focused" : ""
+                        }`}
+                        control="select"
+                        type="text"
+                        label="Record Status"
+                        name="recordStatus"
+                        options={activeOptions}
+                      />
+                      {/* {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
                 )} */}
+                    </div>
                   </div>
-</div>
-<div className="col-md-8 ">
-  <div className="form-group">
-                  <AuctionFormikControl
-                  className={`form-control mt-3 description ${isFocused ? 'focused' : ''}`}
-                    control="textarea"
-                    type="text"
-                    label="Description"
-                    name="description"
-                  />
-                   {/* {isFocused && (
+                  <div className="col-md-8 ">
+                    <div className="form-group">
+                      <AuctionFormikControl
+                        className={`form-control mt-3 description ${
+                          isFocused ? "focused" : ""
+                        }`}
+                        control="textarea"
+                        type="text"
+                        label="Description"
+                        name="description"
+                      />
+                      {/* {isFocused && (
                     <small style={{ color: "red",fontSize:"px" }}>Required</small>
                 )} */}
-                  </div>
+                    </div>
                   </div>
                 </div>
                 <br />
                 <hr />
-
-
 
                 <div className="d-flex justify-content-start">
                   <button
@@ -1112,4 +1134,4 @@ className={`mt-3 auction-mode ${isFocused ? 'focused' : ''}`}
   );
 }
 
-export default MasterUser;
+export default MasterModalForm;

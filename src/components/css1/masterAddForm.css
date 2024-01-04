@@ -1,0 +1,16 @@
+.popAdjust{
+    /* background-color: PINK; */
+    border: 1px solid #ccc;
+    
+    border-radius: 5px;
+    width: 1150px;
+    margin: auto;
+  }
+  .auctionName{
+    position: relative;
+    left: 24px;
+  }
+
+  .des{
+    width: 650px;
+  }
