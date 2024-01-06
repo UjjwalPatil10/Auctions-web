@@ -3,18 +3,18 @@
 import React from "react";
 import { Formik, Form, useFormik } from "formik";
 import * as Yup from "yup";
-import AuctionFormikControl from "../../shared/AuctionFormikControl";
+import AuctionFormikControl from "../../../shared/AuctionFormikControl";
 import axios from "axios";
 import Modal from "react-modal";
-import "../css1/masterAddForm.css";
+import "../../../components/css1/masterAddForm.css";
 import { useState } from "react";
-import AuctionLoadAnimation from "../../shared/AuctionLoadAnimation";
+import AuctionLoadAnimation from "../../../shared/AuctionRadioButtons";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Checkbox } from "../../shared/FormCheckBox";
+// import { Checkbox } from "../../shared/FormCheckBox";
 import { useNavigate } from "react-router-dom";
 import { GridCloseIcon } from "@mui/x-data-grid";
-function MasterAddForm() {
+function MasterEditForm() {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -897,4 +897,4 @@ function MasterAddForm() {
   );
 }
 
-export default MasterAddForm;
+export default MasterEditForm;

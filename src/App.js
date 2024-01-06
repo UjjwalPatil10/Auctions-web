@@ -11,6 +11,7 @@ import MasterTableFilter from './components/MyOwnFolder/shared/GlobalFilterSearc
 import MasterTable from './components/MyOwnFolder/MasterTable';
 // import MasterUserForm from './components/Modal/MasterModalForm';
 import MasterAddForm from './components/MyOwnFolder/MasterAddForm';
+import MasterEditForm from './components/MyOwnFolder/shared/MasterEditForm';
 
 function App() {
   return (
@@ -19,13 +20,15 @@ function App() {
     {/* <MasterAuction/> */}
     {/* <UserGrid/> */}
     {/* <DataGridProDemo/> */}                                                                
-    <Header/>
+    {/* <Header/> */}
     {/* <MasterTableFilter/> */}                 
+    {/* <MasterEditForm/> */}
     <Routes>
-      <Route path='formeditmodal' element={<FormEditModal /> } />
       <Route path='usergrid' element={<UserGrid />} />
+      <Route path='formeditmodal' element={<FormEditModal /> } />
       <Route path='masteruser' element={<MasterUser /> } />                                                                                                 
-      <Route path='/masteraddAuction' element={<MasterAddForm /> } />                                                                                                 
+      <Route path='masteraddAuction' element={<MasterAddForm /> } />                                                                                                 
+      <Route path='mastereditAuction' element={<MasterEditForm /> } />                                                                                                 
       <Route path='masterAuctionTable' element={<MasterTable/> } />
       {/* <Route path='tableFilter' element={<MasterTableFilter /> } /> */}
     </Routes>  
