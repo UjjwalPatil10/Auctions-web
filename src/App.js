@@ -11,7 +11,7 @@ import MasterTableFilter from './components/MyOwnFolder/shared/GlobalFilterSearc
 import MasterTable from './components/MyOwnFolder/MasterTable';
 // import MasterUserForm from './components/Modal/MasterModalForm';
 import MasterAddForm from './components/MyOwnFolder/MasterAddForm';
-import MasterEditForm from './components/MyOwnFolder/shared/MasterEditForm';
+import MasterEditForm from './components/MyOwnFolder/MasterEditForm';
 
 function App() {
   return (

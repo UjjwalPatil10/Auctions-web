@@ -3,12 +3,12 @@
 import React from "react";
 import { Formik, Form, useFormik } from "formik";
 import * as Yup from "yup";
-import AuctionFormikControl from "../../../shared/AuctionFormikControl";
+import AuctionFormikControl from "../../shared/AuctionFormikControl";
 import axios from "axios";
 import Modal from "react-modal";
 import "../../../components/css1/masterAddForm.css";
 import { useState } from "react";
-import AuctionLoadAnimation from "../../../shared/AuctionRadioButtons";
+import AuctionLoadAnimation from "../../shared/AuctionRadioButtons";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 // import { Checkbox } from "../../shared/FormCheckBox";
