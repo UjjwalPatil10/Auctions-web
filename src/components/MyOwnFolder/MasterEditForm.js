@@ -6,7 +6,7 @@ import * as Yup from "yup";
 import AuctionFormikControl from "../../shared/AuctionFormikControl";
 import axios from "axios";
 import Modal from "react-modal";
-import "../../../components/css1/masterAddForm.css";
+import "../css1/masterAddForm.css";
 import { useState } from "react";
 import AuctionLoadAnimation from "../../shared/AuctionRadioButtons";
 import { ToastContainer, toast } from "react-toastify";
