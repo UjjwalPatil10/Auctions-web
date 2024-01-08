@@ -6,7 +6,7 @@ import * as Yup from "yup";
 import AuctionFormikControl from "../../shared/AuctionFormikControl";
 import axios from "axios";
 import Modal from "react-modal";
-import "../css1/masterAddForm.css";
+// import "../css1/masterAddForm.css";
 import { useState } from "react";
 import AuctionLoadAnimation from "../../shared/AuctionRadioButtons";
 import { ToastContainer, toast } from "react-toastify";
@@ -601,21 +601,7 @@ function MasterEditForm() {
                 <br />
 
                 {/* 4th row  */}
-                <div className="row mt-4 auctionName">
-                  {/* <div className="col-md-4">
-                                <div className="form-group auction-result">
-                                    <label for="aucresdate" className="form-control-label">Auction Result Date</label>
-                                </div>
-                            </div> */}
 
-                  <div className="col-md-4">
-                    <div className="form-group "></div>
-                  </div>
-                  <div className="col-md-4">
-                    <div className="form-group"></div>
-                  </div>
-                </div>
-                {/* input field  */}
                 <div className="row mt-2 auctionName">
                   <div className="col-md-4">
                     <div className="form-group">
@@ -646,17 +632,29 @@ function MasterEditForm() {
                   <div className="col-md-8 mt-4">
                     <div className="form-group">
                       <div className="row">
-                  
+                        {/* <AuctionFormikControl
+                                      control="checkbox"
+                                      name="checkboxOption"
+                                      
+                                      options={checkboxOptions}
+                                      /> */}
                         <div className="col">
                           <div className="checkbox">
                             <label for="checkbox1" className="form-check-label">
-                            <AuctionFormikControl
-          control="checkbox"
-          name="bulkbid"
-          label="bulkbid"
-          value={formik.values.bulkbid ? 'bulkbid' : ''}
-        />
-                              
+                           <AuctionFormikControl
+                                      control="checkbox"
+                                      name="checkboxOption"
+                                      
+                                      options={checkboxOptions}
+                                      />
+                              {/* <input
+                                type="checkbox"
+                                id="checkbox1"
+                                name="checkboxOption"
+                                value="option3"
+                                className="form-check-input"
+                                style={{ border: "1px solid gray" }}
+                              /> */}
                               {/* <span> Hide Bulk Bid</span> */}
                             </label>
                             {/* {formik.touched.checkbox1 &&
@@ -672,13 +670,115 @@ function MasterEditForm() {
                         <div className="col">
                           <div className="checkbox">
                             <label for="checkbox2" className="form-check-label">
+                              {/* <input
+                                type="checkbox"
+                                id="checkbox2"
+                                name="checkbox2"
+                                value="option3"
+                                className="form-check-input"
+                                style={{ border: "1px solid gray" }}
+                              />{" "} */}
+                              {/* <span>Allow Proxy Bid</span> */}
+                            </label>
+                          </div>
+                        </div>
+                        <div className="col">
+                          <div className="checkbox">
+                            <label for="checkbox3" className="form-check-label">
+                              {/* <input
+                                type="checkbox"
+                                id="checkbox3"
+                                name="checkbox3"
+                                value="option3"
+                                className="form-check-input"
+                                style={{ border: "1px solid gray" }}
+                              />{" "} */}
+                              {/* <span>Allow PopCorn Bid</span> */}
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* <div className="row mt-4 auctionName">
+                  <div className="col-md-4">
+                                <div className="form-group auction-result">
+                                    <label for="aucresdate" className="form-control-label">Auction Result Date</label>
+                                </div>
+                            </div>
+
+                  <div className="col-md-4">
+                    <div className="form-group "></div>
+                  </div>
+                  <div className="col-md-4">
+                    <div className="form-group"></div>
+                  </div>
+                </div> */}
+                {/* input field  */}
+                {/* <div className="row mt-2 auctionName">
+                  <div className="col-md-4">
+                    <div className="form-group">
+                      <AuctionFormikControl
+                        className={`form-control mt-2 endDateInp ${
+                          isFocused ? "focused" : ""
+                        }`}
+                        control="input"
+                        type="text"
+                        label="Auction Result Date"
+                        name="auctionResult"
+                      />
+                      <input
+                    type="text"
+                    id="aucresdate"
+                    className={`form-control auctionResult ${isFocused ? 'focused' : ''}`}
+                    onFocus={handleFocus}
+                    // onBlur={handleBlur}
+                    required
+                    style={{ border: "1px solid #ccc" }}
+                /> 
+                      {isFocused && (
+                    <small style={{ color: "red",fontSize:"px" }}>Required</small>
+                )} 
+                    </div>
+                  </div>
+
+                  <div className="col-md-8 mt-4">
+                    <div className="form-group">
+                      <div className="row">
+                  
+                        <div className="col">
+                          <div className="checkbox">
+                            <label for="checkbox1" className="form-check-label">
+                            <AuctionFormikControl
+          control="checkbox"
+          name="bulkbid"
+          label="bulkbid"
+          value={formik.values.bulkbid ? 'bulkbid' : ''}
+        />
+                              
+                              <span> Hide Bulk Bid</span>
+                            </label>
+                            {formik.touched.checkbox1 &&
+                              formik.errors.checkbox1 && (
+                                <small
+                                  style={{ color: "red", fontSize: "12px" }}
+                                >
+                                  {formik.errors.checkbox1}
+                                </small>
+                              )}
+                          </div>
+                        </div>
+                        <div className="col">
+                          <div className="checkbox">
+                            <label for="checkbox2" className="form-check-label">
                             <AuctionFormikControl
           control="checkbox"
           name="proxybid"
           label="proxybid"
           value={formik.values.proxybid ? 'proxybid' : ''}
         />
-                              {/* <span>Allow Proxy Bid</span> */}
+                              <span>Allow Proxy Bid</span>
                             </label>
                           </div>
                         </div>
@@ -691,14 +791,14 @@ function MasterEditForm() {
           label="popcornbid"
           value={formik.values.popcornbid ? 'popcornbid' : ''}
         />
-                              {/* <span>Allow PopCorn Bid</span> */}
+                              <span>Allow PopCorn Bid</span>
                             </label>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
                 {/* <div class="row mt-4">
                   <div class="col-md-4">
                   <div class="form-group auction-result">

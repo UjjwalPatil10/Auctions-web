@@ -12,6 +12,7 @@ import MasterTable from './components/MyOwnFolder/MasterTable';
 // import MasterUserForm from './components/Modal/MasterModalForm';
 import MasterAddForm from './components/MyOwnFolder/MasterAddForm';
 import MasterEditForm from './components/MyOwnFolder/MasterEditForm';
+import MasterModalForm from './components/MyOwnFolder/Modal/MasterModalForm';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
     {/* <MasterUser/> */}
     {/* <MasterAuction/> */}
     {/* <UserGrid/> */}
-    {/* <DataGridProDemo/> */}                                                                
+    {/* <DataGridProDemo/> */}                    
+
     {/* <Header/> */}
     {/* <MasterTableFilter/> */}                 
     {/* <MasterEditForm/> */}
@@ -29,6 +31,7 @@ function App() {
       <Route path='masteruser' element={<MasterUser /> } />                                                                                                 
       <Route path='masteraddAuction' element={<MasterAddForm /> } />                                                                                                 
       <Route path='mastereditAuction' element={<MasterEditForm /> } />                                                                                                 
+      <Route path='mastermodalForm' element={<MasterModalForm /> } />                                                                                                 
       <Route path='masterAuctionTable' element={<MasterTable/> } />
       {/* <Route path='tableFilter' element={<MasterTableFilter /> } /> */}
     </Routes>  

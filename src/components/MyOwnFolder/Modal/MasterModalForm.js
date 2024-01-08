@@ -1111,7 +1111,7 @@ function MasterModalForm() {
                 <br />
                 <hr />
 
-                <div className="d-flex justify-content-start">
+                <div className="d-flex justify-content-center">
                   <button
                     type="submit"
                     className="btn btn-outline-primary"

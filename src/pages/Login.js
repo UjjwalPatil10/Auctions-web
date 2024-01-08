@@ -1,103 +1,140 @@
-import React, { useState } from "react";
-import "./pages/Login.css";
-import Logo from '../logo.png'
+import React from "react";
+import { useEffect, useState } from "react";
+import { useAuth } from "../provider/authProvider";
+import { Link, useNavigate } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import axiosInstance from "../utils/axiosInstance";
+import "../css/Login.css";
+import { Button } from "bootstrap";
+import { ToastContainer, toast } from "react-toastify";
+import { Checkbox, FormControlLabel, Grid } from "@mui/material";
+const Login = () => {
+  const { setToken } = useAuth();
+  const navigate = useNavigate();
 
-
-const Login = () => {  // React States
-  const [errorMessages, setErrorMessages] = useState({});
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  // User Login info
-  const database = [
-    {
-      username: "user1",
-      password: "pass1"
-    },
-    {
-      username: "user2",
-      password: "pass2"
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [usernameError, setUsernameError] = useState(false);
+  const [passwordError, setPasswordError] = useState(false);
+  const handleLogin = async () => {
+    if (!username || !password) {
+      if (!username) setUsernameError(true);
+      if (!password) setPasswordError(true);
+      toast.error("Please fill all the fields.");
+      return;
     }
-  ];
+    try {
+      const response = await axiosInstance.post("/api/v1/auth/authenticate", {
+        username,
+        password,
+      });
 
-  const errors = {
-    uname: "invalid username",
-    pass: "invalid password"
-  };
+      // Assuming the server responds with a user object or token
+      const data = response.data;
 
-  const handleSubmit = (event) => {
-    //Prevent page reload
-    event.preventDefault();
-
-    var { uname, pass } = document.forms[0];
-
-    // Find user login info
-    const userData = database.find((user) => user.username === uname.value);
-
-    // Compare user info
-    if (userData) {
-      if (userData.password !== pass.value) {
-        // Invalid password
-        setErrorMessages({ name: "pass", message: errors.pass });
-      } else {
-        setIsSubmitted(true);
-      }
-    } else {
-      // Username not found
-      setErrorMessages({ name: "uname", message: errors.uname });
+      setToken(data.message);
+      navigate("/products", { replace: true });
+    } catch (error) {
+      // Handle authentication failure (show an error message, redirect, etc.)
+      console.error(
+        "Login failed:",
+        error.response ? error.response.data : error.message
+      );
+      toast.error("Login failed. Please check your credentials.");
     }
   };
-
-  // Generate JSX code for error message
-  const renderErrorMessage = (name) =>
-    name === errorMessages.name && (
-      <div className="error">{errorMessages.message}</div>
-    );
-
-  // JSX code for login form
-  const renderForm = (
-             <>
-              <div className="form">
-                <form onSubmit={handleSubmit}>
-                  <div className="input-container">
-                    <label>USER NAME </label>
-                    <input type="text"  className="form-control form-control-lg"  name="uname"  tabIndex="1"  required />
-                    {renderErrorMessage("uname")}
-                  </div>
-                  <div className="input-container">
-                    <label>PASSWORD </label>
-                    <input type="password" className="form-control form-control-lg" name="pass"  tabIndex="2" required />
-                    {renderErrorMessage("pass")}
-                  </div>
-                  <div class="input-group">
-                  <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate" />
-            <label class="form-check-label" for="flexCheckIndeterminate">
-            Remember Me
-            </label>
-            </div>
-
-          </div>
-                  <div className="button-container">
-                    <input type="submit" value="SIGN IN"/>
-                  </div>
-                </form>
-              </div>
-          </>
-  );
 
   return (
-    <>
-    <div className="app">
-    <div className="login-form">
-      <img className="logo-container" src={Logo} alt="logo" />
-     </div>
-      <div className="login-form">
-        {renderForm}
+    <div className="container mt-5" >
+      <div className="row justify-content-center">
+        <div className="col-md-6">
+          <div className="card-header">
+            <img className="logo" src="/Images/auction-logo.png" />
+          </div>
+        </div>
+        <div></div>
       </div>
+      <div className="row justify-content-center mt-4">
+        <div className="col-md-6">
+          <div className="card adjust">
+            <div className="card-body">
+              <h2 className="card-title text-center">Login</h2>
+              <form>
+                <div className="mb-3">
+                  <label htmlFor="username" className="form-label">
+                    Username:
+                  </label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="username"
+                    required
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                  />
+
+{usernameError && (
+            <div className="invalid-feedback">Required field</div>
+          )}
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="password" className="form-label">
+                    Password:
+                  </label>
+                  <input
+                    type="password"
+                    required
+                    className="form-control"
+                    id="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                   {passwordError && (
+            <div className="invalid-feedback">Required field</div>
+          )}
+                </div>
+                <div>
+                  <FormControlLabel
+                    control={<Checkbox value="remember" color="primary" />}
+                    label="Remember me"
+                  />
+                </div>
+                <div className="row mt-2">
+                  <div className="col-md-12 d-flex justify-content-center">
+                    <button
+                      type="button"
+                      className="btn btn-primary w-100"
+                      onClick={handleLogin}
+                    >
+                      Login
+                    </button>
+                  </div>
+                </div>
+<div className="mt-3">
+
+                <Grid container>
+              <Grid item xs>
+                <Link className="text-decoration-none " href="#" variant="body2">
+                  Forgot password?
+                </Link>
+              </Grid>
+              <Grid item>
+                <Link className="text-decoration-none" href="#" variant="body2"
+                >
+                  {"Don't have an account ?  Register First"}
+                </Link>
+              </Grid>
+            </Grid>
+
+            </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ToastContainer position="top-center" />
     </div>
-    
-    </>   
   );
-}
+};
 
 export default Login;

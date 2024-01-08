@@ -277,6 +277,8 @@ function MasterAddForm() {
 
    
   ];
+
+
   // const checkboxOptions1 = [
   //   { key: "Hide Bulk Bid", value: "hide" },
 
@@ -351,7 +353,7 @@ function MasterAddForm() {
     bulkbid: Yup.string().required("Required"),
     proxybid: Yup.string().required("Required"),
     popcornbid: Yup.string().required("Required"),
-    // checkboxOption: Yup.array().required("Required"),
+    checkboxOption: Yup.array().required("Required"),
     // checkbox1:Yup.array().required("Required")
   });
 
@@ -615,6 +617,8 @@ function MasterAddForm() {
                     <div className="form-group"></div>
                   </div>
                 </div>
+
+                
                 {/* input field  */}
                 <div className="row mt-2 auctionName">
                   <div className="col-md-4">
@@ -652,9 +656,8 @@ function MasterAddForm() {
                             <label for="checkbox1" className="form-check-label">
                             <AuctionFormikControl
           control="checkbox"
-          name="bulkbid"
-          label="bulkbid"
-          value={formik.values.bulkbid ? 'bulkbid' : ''}
+          name="checkboxOption"
+          options={checkboxOptions}
         />
                               
                               {/* <span> Hide Bulk Bid</span> */}
@@ -669,7 +672,7 @@ function MasterAddForm() {
                               )} */}
                           </div>
                         </div>
-                        <div className="col">
+                        {/* <div className="col">
                           <div className="checkbox">
                             <label for="checkbox2" className="form-check-label">
                             <AuctionFormikControl
@@ -678,11 +681,11 @@ function MasterAddForm() {
           label="proxybid"
           value={formik.values.proxybid ? 'proxybid' : ''}
         />
-                              {/* <span>Allow Proxy Bid</span> */}
+                              <span>Allow Proxy Bid</span>
                             </label>
                           </div>
-                        </div>
-                        <div className="col">
+                        </div> */}
+                        {/* <div className="col">
                           <div className="checkbox">
                             <label for="checkbox3" className="form-check-label">
                             <AuctionFormikControl
@@ -691,10 +694,10 @@ function MasterAddForm() {
           label="popcornbid"
           value={formik.values.popcornbid ? 'popcornbid' : ''}
         />
-                              {/* <span>Allow PopCorn Bid</span> */}
+                              <span>Allow PopCorn Bid</span>
                             </label>
                           </div>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                   </div>
@@ -860,9 +863,9 @@ function MasterAddForm() {
                 <br />
                 <hr />
 
-                <div className="d-flex justify-content-center row">
+                <div className="row d-flex justify-content-center">
 
-                  <div className="col-md-3">
+                  <div className="col-md-3 d-flex justify-content-between">
 
                   <button
                     type="submit"
